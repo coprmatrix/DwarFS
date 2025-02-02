@@ -1,0 +1,15 @@
+-------------------------------------------------------------------
+Tue Jan 07 05:47:15 UTC 2024 - Unknowledge <yaranaikakimochi@protonmail.com>
+
+- Updated to 0.7.4
+
+-------------------------------------------------------------------
+Tue Dec 12 01:18:49 UTC 2023 - Unknowledge <yaranaikakimochi@protonmail.com>
+
+- Updated to 0.7.3
+
+-------------------------------------------------------------------
+Sun Dec  3 19:28:06 UTC 2023 - Unknowledge <yaranaikakimochi@protonmail.com>
+
+- Added fmt to the source directory instead of cloning from github
+- Added lacking dependencies
