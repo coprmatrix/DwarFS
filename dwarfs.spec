@@ -66,6 +66,10 @@ BuildRequires: gtest
 BuildRequires: gmock
 BuildRequires: thrift
 BuildRequires: folly-devel
+BuildRequires: glog-devel
+BuildRequires: glog
+BuildRequires: pkgconfig(thrift)
+
 %description
 DwarFS is a read-only file system with a focus on achieving very high compression ratios in particular for very redundant data.
 
@@ -119,7 +123,8 @@ Requires: libdwarfs%{?suse_version:so_ver} = %{version}
 
 %prep
 %setup -q
-
+#rm -Rfv folly ||:
+#rm -Rfv fbthrift ||:
 
 %build
 %cmake -DWITH_TESTS=OFF -DPREFER_SYSTEM_GTEST=OFF -DPREFER_SYSTEM_FMT=ON -DCMAKE_EXE_LINKER_FLAGS="-lboost_system -lboost_filesystem" 
