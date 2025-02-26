@@ -137,13 +137,13 @@ Requires: libdwarfs%{?suse_version:so_ver} = %{version}
 %install
 %cmake_install
 mkdir -pv %{buildroot}/%{_bindir}
-mv %{buildroot}/%{_usr}/sbin/%{name} %{buildroot}/%{_bindir}/%{name}
-rm -rf %{buildroot}/%{_sbindir}
+mv %{buildroot}/%{_usr}/sbin/* %{buildroot}/%{_bindir}/
+rm -Rfv %{buildroot}/%{_usr}/sbin/
 find %{buildroot} -type f -executable -exec strip --strip-all '{}' +
 
 %files
 %license LICENSE
-%{_bindir}/*%{name}*
+%{_bindir}/*
 
 
 %changelog
