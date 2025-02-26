@@ -136,7 +136,8 @@ Requires: libdwarfs%{?suse_version:so_ver} = %{version}
 
 %install
 %cmake_install
-cp %{buildroot}/%{_sbindir}/%{name} %{buildroot}/%{_bindir}/%{name}
+mkdir -pv %{buildroot}/%{_bindir}
+mv %{buildroot}/%{_sbindir}/%{name} %{buildroot}/%{_bindir}/%{name}
 rm -rf %{buildroot}/%{_sbindir}
 find %{buildroot} -type f -executable -exec strip --strip-all '{}' +
 
