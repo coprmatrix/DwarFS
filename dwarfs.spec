@@ -127,7 +127,7 @@ Requires: libdwarfs%{?suse_version:so_ver} = %{version}
 #rm -Rfv fbthrift ||:
 
 %build
-%cmake -DWITH_TESTS=OFF -DPREFER_SYSTEM_GTEST=OFF -DPREFER_SYSTEM_FMT=ON -DCMAKE_EXE_LINKER_FLAGS="-lboost_system -lboost_filesystem" 
+%cmake -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DWITH_TESTS=OFF -DPREFER_SYSTEM_GTEST=OFF -DPREFER_SYSTEM_FMT=ON -DCMAKE_EXE_LINKER_FLAGS="-lboost_system -lboost_filesystem" 
 # -lboost_process"
 %cmake_build
 
