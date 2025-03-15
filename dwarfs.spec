@@ -5,7 +5,6 @@ Release:        0%{?dist}
 Summary:        A fast high compression read-only file system
 
 BuildRequires: sed
-ExcludeArch: s390x
 
 %define so_ver %(echo %{version} | sed 's/\\./_/g;')
 
