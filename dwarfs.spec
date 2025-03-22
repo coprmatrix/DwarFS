@@ -11,6 +11,7 @@ BuildRequires: sed
 License:        GPL-3.0
 URL:            https://github.com/mhx/%{name}
 Source0:        https://github.com/mhx/%{name}/releases/download/v%{version}/dwarfs-%{version}.tar.xz
+ExcludeArch:    ppc64le s390x
 
 %define libboost() ( boost-devel or libboost_%{1}-devel )
 
